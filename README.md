@@ -4,7 +4,7 @@
  - Eclipse에서 Spring boot(Java)를 기반으로 책을 조회, 등록, 삭제 하는 서비스를 구현하는 프로젝트
  - Restful API를 사용하여 데이터 생성, 조회, 수정, 삭제하는 실습 (CRUD Opetation)
 
-`MySQL` ``
+`Web MVC` `MySQL` ``
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
