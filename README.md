@@ -12,6 +12,10 @@
 - Java
 - Eclipse
 - Spring Boot
+- Github
+
+![깃](https://github.com/shyang12/Hyup_Blog/assets/85710913/b17fb607-383c-402c-8bf5-74368cc5ff94)
+
 
 ### 1. 2 Dependencies
 - Spring Boot DevTools
