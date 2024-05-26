@@ -36,18 +36,8 @@
 
 - 
 
-## 2. Architecture
 
-![기능별로 Path 설정](https://github.com/shyang12/Book_FInd/assets/85710913/9cd9b7b9-2fdd-4700-b3b6-35029863b87a)
-
-![스프링프레임워크 동작](https://github.com/shyang12/Book_FInd/assets/85710913/7f6e7df1-b585-4984-9a14-4e41a431fb01)
-
-![dfdf](https://github.com/shyang12/Book_FInd/assets/85710913/52ebcb61-b71d-4622-9577-7ef01b139d58)
-
-![vfgf](https://github.com/shyang12/Book_FInd/assets/85710913/cde1df59-ca99-43c7-bf67-33aefe897dec)
-
-  
-## 3. Result   
+## 2. Result   
 - Spring Boot 실습
   
 ![실습 1](https://github.com/shyang12/Book_FInd/assets/85710913/a4b41924-ad12-4c5e-b7d6-164023def682)
