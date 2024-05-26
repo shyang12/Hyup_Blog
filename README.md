@@ -37,6 +37,7 @@
 ![영속성](https://github.com/shyang12/Hyup_Blog/assets/85710913/b999af1f-d088-480a-b088-a5ef613bd1f3)
 
 - 연관관계 만들기
+
   ▶ @ManyToOne
   
   ▶ @OneToMany
