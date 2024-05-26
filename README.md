@@ -9,8 +9,7 @@
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
 - Windows 10
-- Java
-- Eclipse
+- Eclipse / Java
 - Spring Boot
 - Postman
 - Github
