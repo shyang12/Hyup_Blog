@@ -1,8 +1,16 @@
 package com.yang.blog.test;
 
+import java.util.List;
 import java.util.function.Supplier;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +25,23 @@ public class DummyControllerTest {
 	
 	@Autowired // 의존성 주입(DI)
 	private UserRepository userRepository;
+	
+	@GetMapping("/dummy/users")
+	public List<User> list() {
+		return userRepository.findAll();
+	}
+	
+	// 한페이지당 2건에 데이터를 리턴받아 볼 예정
+	@GetMapping("/dummy/user")
+	public List<User> pageList(@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+		Page<User> pagingUser = userRepository.findAll(pageable);
+		
+		if (pagingUser.isLast()) {
+			
+		}
+		List<User> users = pagingUser.getContent();
+		return users;
+	}
 	
 	// {id} 주소로 파마레터를 전달 받을 수 있음
 	@GetMapping("/dummy/user/{id}")
