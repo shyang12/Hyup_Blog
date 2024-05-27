@@ -4,7 +4,7 @@
  - Eclipse에서 Spring boot(Java)를 기반으로 나만의 블로그 서비스를 구현하는 프로젝트
  - Restful API를 사용하여 데이터 생성, 조회, 수정, 삭제하는 실습 (CRUD Opetation)
 
-`Web MVC` `MySQL` `Postman` `MIME Type` `JPA` `JSON`
+`Web MVC` `MySQL` `Postman` `MIME Type` `JPA` `JSON` `Ajax`
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
@@ -30,6 +30,7 @@
 - Rest API
 - JPA
 - JSON
+- Ajax
 
 ### 1. 4 Concept
 - 영속성을 프리젠테이션 계층까지 가져간다. 트랜잭션은 Service계층에서 종료된다. Transaction이 종료된 후에도 Controller의 Session이 close되지 않았기 때문에, 영속 객체는 Persistence 상태를 유지할 수 있으며, 따라서 프록시 객체에 대한 Lazy Loading을 수행할 수 있게 된다. -> `더티 체킹`
@@ -80,21 +81,25 @@
   4. 스프링 컨트롤러의 파싱 전략 2
  
      스프링은 key=value 형태의 데이터를 오브젝트로 파싱해서 받아주는 역할도 한다.
+     
      ** 이때 주의 할점은 setter가 없으면 key=value 데이터를 스프링이 파싱해서 넣어주지 못한다.
 
-  5. key=value가 아닌 데이터는 어떻게 파싱할까?
+  6. key=value가 아닌 데이터는 어떻게 파싱할까?
  
      json 데이터나 일반 text데이터는 스프링 컨트롤러에서 받기 위해서는 @RequestBody 어노테이션이 필요하다.
+     
      ** 기본전략이 스프링 컨트롤러는 key=value 데이터를 파싱해서 받아주는 일을 하는데 다른 형태의 데이터
         가령 json 같은 데이터는 아래와 같이 생겼다.
 
      @RequestBody 어노테이션을 붙이면 MessageConverter 클래스를 구현한 Jackson 라이브러리가 발동하면서
      json 데이터를 자바 오브젝트로 파싱하여 받아준다.
 
-  6. form 태그로 json데이터 요청방법
+  8. form 태그로 json데이터 요청방법
  
 ![방법](https://github.com/shyang12/Hyup_Blog/assets/85710913/226250bb-0adc-4dcb-951c-e50e4287b153)
      
+![방법2](https://github.com/shyang12/Hyup_Blog/assets/85710913/16d33a5f-5f3e-4858-a4c4-10e192100989)
+
 
 ### 1. 4 Implement
 -
@@ -112,6 +117,8 @@
 ├── repository
 │   ├── UserRepository.java
 │   └── chat_screen.java
+├── handler
+│   └── GlobalExceptionHandler.java
 ├── test
 │   ├── BlogController.java
 │   ├── DummyController.java
