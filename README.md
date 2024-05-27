@@ -85,6 +85,16 @@
   5. key=value가 아닌 데이터는 어떻게 파싱할까?
  
      json 데이터나 일반 text데이터는 스프링 컨트롤러에서 받기 위해서는 @RequestBody 어노테이션이 필요하다.
+     ** 기본전략이 스프링 컨트롤러는 key=value 데이터를 파싱해서 받아주는 일을 하는데 다른 형태의 데이터
+        가령 json 같은 데이터는 아래와 같이 생겼다.
+
+     @RequestBody 어노테이션을 붙이면 MessageConverter 클래스를 구현한 Jackson 라이브러리가 발동하면서
+     json 데이터를 자바 오브젝트로 파싱하여 받아준다.
+
+  6. form 태그로 json데이터 요청방법
+ 
+![방법](https://github.com/shyang12/Hyup_Blog/assets/85710913/226250bb-0adc-4dcb-951c-e50e4287b153)
+     
 
 ### 1. 4 Implement
 -
