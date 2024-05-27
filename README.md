@@ -34,6 +34,8 @@
 ### 1. 4 Concept
 - 영속성을 프리젠테이션 계층까지 가져간다. 트랜잭션은 Service계층에서 종료된다. Transaction이 종료된 후에도 Controller의 Session이 close되지 않았기 때문에, 영속 객체는 Persistence 상태를 유지할 수 있으며, 따라서 프록시 객체에 대한 Lazy Loading을 수행할 수 있게 된다. -> `더티 체킹`
 
+  ▶ 함수 종료시에 자동 commit이 됨.
+
 ![영속성](https://github.com/shyang12/Hyup_Blog/assets/85710913/b999af1f-d088-480a-b088-a5ef613bd1f3)
 
 - 연관관계 만들기
