@@ -98,6 +98,8 @@
  
 ![방법](https://github.com/shyang12/Hyup_Blog/assets/85710913/226250bb-0adc-4dcb-951c-e50e4287b153)
      
+![방법2](https://github.com/shyang12/Hyup_Blog/assets/85710913/16d33a5f-5f3e-4858-a4c4-10e192100989)
+
 
 ### 1. 4 Implement
 -
