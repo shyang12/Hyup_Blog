@@ -53,14 +53,18 @@
 
 - Insert ▶ @DynamicInsert insert할때 null 인 필드 제외
 - 무한 참조 방지하기
+- 
   (1) Entity로 받고 Json직렬화 하기 전에 DTO 생성후 복사하기
-       BeanUtils.copyProperties(A,B) 
+  
+       BeanUtils.copyProperties(A,B)
+  
   (2) 처음부터 DTO로 DB에서 받기
+  
   (3) @JsonIgnore
+  
   (4) @JsonIgnoreProperties({"board"})
-  (5) @JsonBackReference @JsonManagedReference 
-
-4. 더미 데이터 select 및 응답
+  
+  (5) @JsonBackReference @JsonManagedReference
 
 ### 1. 4 Implement
 -
