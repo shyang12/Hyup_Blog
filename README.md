@@ -31,7 +31,7 @@
 - JPA
 - JSON
 
-### 1. 4 Implement
+### 1. 4 Concept
 - 영속성을 프리젠테이션 계층까지 가져간다. 트랜잭션은 Service계층에서 종료된다. Transaction이 종료된 후에도 Controller의 Session이 close되지 않았기 때문에, 영속 객체는 Persistence 상태를 유지할 수 있으며, 따라서 프록시 객체에 대한 Lazy Loading을 수행할 수 있게 된다.
 
 ![영속성](https://github.com/shyang12/Hyup_Blog/assets/85710913/b999af1f-d088-480a-b088-a5ef613bd1f3)
@@ -48,6 +48,9 @@
   
   ▶ ManyToMany는 사용하지 않는다. 그 이유는 서로의 primary key로만 중간 테이블을 생성해주는데, 날짜나 시간 다른 필드들이 필요할 수 있기 때문에, 내가 중간 테이블을 직접만들고
      @OneToMany, @OneToMany를 사용한다.
+
+### 1. 4 Implement
+-
 
 ## 2. Project Architecture   
 ```bash
