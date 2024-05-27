@@ -51,6 +51,17 @@
   ▶ ManyToMany는 사용하지 않는다. 그 이유는 서로의 primary key로만 중간 테이블을 생성해주는데, 날짜나 시간 다른 필드들이 필요할 수 있기 때문에, 내가 중간 테이블을 직접만들고
      @OneToMany, @OneToMany를 사용한다.
 
+- Insert ▶ @DynamicInsert insert할때 null 인 필드 제외
+- 무한 참조 방지하기
+  (1) Entity로 받고 Json직렬화 하기 전에 DTO 생성후 복사하기
+       BeanUtils.copyProperties(A,B) 
+  (2) 처음부터 DTO로 DB에서 받기
+  (3) @JsonIgnore
+  (4) @JsonIgnoreProperties({"board"})
+  (5) @JsonBackReference @JsonManagedReference 
+
+4. 더미 데이터 select 및 응답
+
 ### 1. 4 Implement
 -
 
