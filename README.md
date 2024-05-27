@@ -66,6 +66,36 @@
   
   (5) @JsonBackReference @JsonManagedReference
 
+- Json 데이터로 통신
+  
+  1. Get요청 -> 주소에 데이터를 담아 보낸다. 데이터 형태는 key=value
+  2. Post, Put, Delete 요청 -> Body에 데이터를 담아 보낸다. 데이터 형태는 json으로 통일하는 것이 좋다.
+  3. 스프링 컨트롤러의 파싱 전략 1
+ 
+     스프링 컨트롤러는 key=value 데이터를 자동으로 파싱하여 변수에 담아준다.
+     가령 get요청은 key=value이고 post요청중에 x-www-form-urlencoded
+     (form태그를 만들어서 데이터 전송) 시에도 key=value 이기 때문에 이러한
+     데이터는 아래와 같이 함수의 파라메터로 받을 수 있다.
+     
+  4. 스프링 컨트롤러의 파싱 전략 2
+ 
+     스프링은 key=value 형태의 데이터를 오브젝트로 파싱해서 받아주는 역할도 한다.
+     ** 이때 주의 할점은 setter가 없으면 key=value 데이터를 스프링이 파싱해서 넣어주지 못한다.
+
+  5. key=value가 아닌 데이터는 어떻게 파싱할까?
+ 
+     json 데이터나 일반 text데이터는 스프링 컨트롤러에서 받기 위해서는 @RequestBody 어노테이션이 필요하다.
+     ** 기본전략이 스프링 컨트롤러는 key=value 데이터를 파싱해서 받아주는 일을 하는데 다른 형태의 데이터
+        가령 json 같은 데이터는 아래와 같이 생겼다.
+
+     @RequestBody 어노테이션을 붙이면 MessageConverter 클래스를 구현한 Jackson 라이브러리가 발동하면서
+     json 데이터를 자바 오브젝트로 파싱하여 받아준다.
+
+  6. form 태그로 json데이터 요청방법
+ 
+![방법](https://github.com/shyang12/Hyup_Blog/assets/85710913/226250bb-0adc-4dcb-951c-e50e4287b153)
+     
+
 ### 1. 4 Implement
 -
 
