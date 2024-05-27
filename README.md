@@ -114,6 +114,8 @@
 ├── repository
 │   ├── UserRepository.java
 │   └── chat_screen.java
+├── handler
+│   └── GlobalExceptionHandler.java
 ├── test
 │   ├── BlogController.java
 │   ├── DummyController.java
