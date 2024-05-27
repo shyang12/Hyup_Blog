@@ -49,7 +49,53 @@
   ▶ ManyToMany는 사용하지 않는다. 그 이유는 서로의 primary key로만 중간 테이블을 생성해주는데, 날짜나 시간 다른 필드들이 필요할 수 있기 때문에, 내가 중간 테이블을 직접만들고
      @OneToMany, @OneToMany를 사용한다.
 
-## 2. Result   
+## 2. Project Architecture   
+```bash
+├── main
+│   ├── HyupBlogApplication.java
+│   └── constants.java
+├── model
+│   ├── Board.java
+│   ├── Reply.java
+│   ├── RoleType.java
+│   └── User.java
+├── repository
+│   ├── UserRepository.java
+│   └── chat_screen.java
+├── test
+│   ├── BlogController.java
+│   ├── DummyController.java
+│   ├── Member.java
+│   └── TempController.java
+├── add_image
+│   └── add_image.java
+```
+
+## 3. MySQL   
+### 3.1 Database
+```bash
+├── board
+│    ├── count
+│    ├── id
+│    ├── userId
+│    ├── createDate
+│    ├── title
+│    └── content
+├── reply
+│    ├── boardId
+│    ├── id
+│    ├── userId
+│    ├── creatDate
+│    └── content
+├── user
+│    ├── id
+│    ├── createDate
+│    ├── email
+│    ├── password
+│    └── role
+```
+
+## 4. Result   
 - Spring Boot 실습
   
 ![실습 1](https://github.com/shyang12/Book_FInd/assets/85710913/a4b41924-ad12-4c5e-b7d6-164023def682)
