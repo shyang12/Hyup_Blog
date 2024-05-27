@@ -66,6 +66,11 @@
   
   (5) @JsonBackReference @JsonManagedReference
 
+- Json 데이터로 통신
+  
+  1. Get요청
+     주소에 데이터를 담아 보낸다. 데이터 형태는 key=value
+
 ### 1. 4 Implement
 -
 
