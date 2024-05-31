@@ -103,7 +103,7 @@
 
 
 ### 1. 4 Implement
--
+- `Bootstrap 4`를 사용하여 기본적인 홈페이지의 UI를 구성
 
 ## 2. Project Architecture   
 ```bash
@@ -124,10 +124,20 @@
 │   ├── BoardController.java
 │   └── UserController.java
 └── test
-    ├── BlogController.java
-    ├── DummyController.java
-    ├── Member.java
-    └── TempController.java
+│   ├── BlogController.java
+│   ├── DummyController.java
+│   ├── Member.java
+│   └── TempController.java
+├── UI
+│   ├── main
+│   │    ├── index.jsp
+│   │    └── test.jsp
+│   ├── layout
+│   │    ├── footer.jsp
+│   │    └── header.jsp
+│   ├── user
+│   │    ├── joinForm.jsp
+│   │    └── loginForm.jsp
 ```
 
 ## 3. MySQL   
