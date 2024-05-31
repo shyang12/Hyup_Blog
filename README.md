@@ -4,13 +4,14 @@
  - Eclipse에서 Spring boot(Java)를 기반으로 나만의 블로그 서비스를 구현하는 프로젝트
  - Restful API를 사용하여 데이터 생성, 조회, 수정, 삭제하는 실습 (CRUD Opetation)
 
-`Web MVC` `MySQL` `Postman` `MIME Type` `JPA` `JSON` `Ajax`
+`Bootstrap` `Web MVC` `MySQL` `Postman` `MIME Type` `JPA` `JSON` `Ajax`
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
 - Windows 10
 - Eclipse / Java
 - Spring Boot
+- Bootstrap
 - Postman
 - Github
 
@@ -119,13 +120,14 @@
 │   └── chat_screen.java
 ├── handler
 │   └── GlobalExceptionHandler.java
-├── test
-│   ├── BlogController.java
-│   ├── DummyController.java
-│   ├── Member.java
-│   └── TempController.java
-├── add_image
-│   └── add_image.java
+├── controller
+│   ├── BoardController.java
+│   └── UserController.java
+└── test
+    ├── BlogController.java
+    ├── DummyController.java
+    ├── Member.java
+    └── TempController.java
 ```
 
 ## 3. MySQL   
