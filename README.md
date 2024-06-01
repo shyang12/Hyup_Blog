@@ -129,7 +129,11 @@
 │   └── chat_screen.java
 ├── handler
 │   └── GlobalExceptionHandler.java
+├── dto
+│   └── ResponseDto.java
 ├── controller
+│   ├── api
+│   │    ├── UserApiController.java
 │   ├── BoardController.java
 │   └── UserController.java
 └── test
