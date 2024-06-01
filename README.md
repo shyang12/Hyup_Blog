@@ -101,6 +101,12 @@
      
 ![방법2](https://github.com/shyang12/Hyup_Blog/assets/85710913/16d33a5f-5f3e-4858-a4c4-10e192100989)
 
+- 회원가입 시 `Ajax` 사용 이유
+  (1) 요청에 대한 응답을 html이 아닌 Data(Json)를 받기 위해
+
+![ajax](https://github.com/shyang12/Hyup_Blog/assets/85710913/dcc8c5b5-7566-4ea5-a58e-a67367f7d730)
+
+  (2) 
 
 ### 1. 4 Implement
 - `Bootstrap 4`를 사용하여 기본적인 홈페이지의 UI를 구성
