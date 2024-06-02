@@ -38,6 +38,11 @@
 
   ▶ 함수 종료시에 자동 commit이 됨.
 
+- 세션의 시작은 서블릿이 시작되는 시점 부터~ (세션은 영속성 컨텍스트를 포함)
+- 트랜잭션의 시작은 서비스 레이어부터, JDBC 커넥션도 이 시점부터.
+- 트랜잭션의 종료는 서비스 계층에서 종료, JDBC 커넥션도 이 시점 부터 종료.
+- 세션은 컨트롤러 영역까지 끌고 가기 때문에 영속성이 보장되어 select가 가능해지고 lazy-loading이 가능해진다.
+
 ![영속성](https://github.com/shyang12/Hyup_Blog/assets/85710913/b999af1f-d088-480a-b088-a5ef613bd1f3)
 
 - 연관관계 만들기
@@ -131,6 +136,8 @@
 │   └── GlobalExceptionHandler.java
 ├── dto
 │   └── ResponseDto.java
+├── service
+│   └── UserService.java
 ├── controller
 │   ├── api
 │   │    ├── UserApiController.java
