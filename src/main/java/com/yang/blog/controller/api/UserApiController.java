@@ -11,6 +11,8 @@ import com.yang.blog.model.RoleType;
 import com.yang.blog.model.User;
 import com.yang.blog.service.UserService;
 
+import jakarta.servlet.http.HttpSession;
+
 @RestController
 public class UserApiController {
 	
@@ -23,6 +25,17 @@ public class UserApiController {
 		// 실제로 DB에 insert를 하고 아래에서 return이 되면 된다.
 		user.setRole(RoleType.USER);
 		userService.회원가입(user);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+	}
+	
+	@PostMapping("/api/user/login")
+	public ResponseDto<Integer> login(@RequestBody User user, HttpSession session) {
+		System.out.println("UserApiController : login 호출됨");
+		User principal = userService.로그인(user); // principal (접근주체)
+		
+		if(principal != null) {
+			session.setAttribute("principal", principal);
+		}
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 }
