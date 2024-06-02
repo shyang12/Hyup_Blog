@@ -131,6 +131,8 @@
 │   └── GlobalExceptionHandler.java
 ├── dto
 │   └── ResponseDto.java
+├── service
+│   └── UserService.java
 ├── controller
 │   ├── api
 │   │    ├── UserApiController.java
