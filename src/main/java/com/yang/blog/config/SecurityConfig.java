@@ -10,15 +10,16 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
 	@Bean
-	BCryptPasswordEncoder encode() {
+	BCryptPasswordEncoder encodePWD() {
 		return new BCryptPasswordEncoder();
 	}
 
 	@Bean
 	SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		http
+				.csrf().disable()
 				.authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-				.requestMatchers("/auth/**")
+				.requestMatchers("/", "/auth/**", "/js/**", "/css/**", "image/**")
 				.permitAll()
 				.anyRequest()
 				.authenticated())
